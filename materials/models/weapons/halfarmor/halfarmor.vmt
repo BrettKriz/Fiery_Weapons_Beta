@@ -1,0 +1,17 @@
+VertexLitGeneric
+{
+	$basetexture "models/weapons/halfarmor/halfarmor"
+	$bumpmap "models/weapons/halfarmor/halfarmor_normal"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.7 .7 .7]"
+	"$envmapcontrast" "1"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$phong" "1"
+	"$phongexponent" "10"
+	"$phongboost" "1"
+	"$phongfresnelranges"	"[0.1 1 10]"
+	
+	$model 1
+}

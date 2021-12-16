@@ -1,0 +1,12 @@
+"AddonInfo"
+{
+	"name"		"Fiery Weapons Base BETA"
+	"version"	"3.0"
+	"up_date"	"Dec 16th 2021"
+	"author_name"	"Nova Prospekt"
+	"author_email"	"n/a"
+	"author_url"	"http://www.facepunch.com/"
+	
+	"info"		"Contains only the LUA associated with Fiery Weapons Base"
+
+}

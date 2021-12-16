@@ -1,0 +1,338 @@
+I'm here today to unveil a long term personal project that's still in the works, but is ready for general testing and usage,
+================================================== ==================================================
+• Fiery Weapons Base •
+ALPHA 2.0
+================================================== ==================================================
+
+This swep base was created from weapon_cs_base and is designed for common swep needs (covered below), most of which are for RP.
+
+Keep in mind that this is ONLY AN ALPHA, and is NOT Final
+
+The weapon pack includes all of the C_model cstrike models, as well as some custom weapons, and even a DoD:S colt (for fun)!
+
+the base supports dual wielded weapons, burst rifles, permanent silenced weapons, MG's, empty weapon animations, and soon will support melee and thrown weapons.
+
+
+
+Download on Workshop!
+
+
+
+
+ANIMATION
+================================================== ==================================================
+Hold type fix included
+Hold type aliases included
+
+Dynamic animation execution for View Model animations and 3rd person animations
+
+Animation engine
+• Crunches complex viewmodel and 3rd person animations into efficient, correct SWEP status animations , as-well as handling playback rates, sounds, Idling, and ironsights
+• Called with VMact( anim_name, pbr, snd, volume, idle_after, iron_off )
+• Can also be called with any number of missing or null values!
+• anim_name can be either an enumeration, a string of an enumeration, or a shortcut string like "PRIMARY" "SECONDARY" "DRYFIRE" "RELOAD" "DRAW" "IDLE"
+• SWEP.ReloadSound handles any reload sounds that need to be played
+• SWEP.DrawSound handles any draw/deploy sounds that need to be played
+
+
+Multiple animation assignment for weapons (See Fiery Tags for in code names)
+• Ironsigh holdtypes (IE holding an AK as "ar2" even tho its hipfire is "shotgun")
+• Hipfire holdtypes (When not aiming or reloading)
+• Reload holdtypes (IE reloading an "ar2 "held M4 as "smg")
+
+3rd Person animations
+• All holdtypes are fixed and backwards compatible
+• When drawing swep, hold type is set to nothing for 80% of the view models draw sequence, a notable RP feature
+• When going into or out of ironsights the hold type changes to show players aiming down the sights, or holding it at the hip/non-sighting
+
+
+FUNCTIONALITIES
+================================================== ==================================================
+
+Streamlined weapon delays and actions for better interaction
+
+Ironsights (and similar data) will eventually become completely client controlled via files, currently waiting for data schemes to be considered
+
+Ability to drop a weapons magazine with full animations great for RP (Shotguns have animations for this in works) (Akimbos currently are being looked at for alternative key combos for this)
+• (Drop weapon may be added as well)
+• To use this, Hold Right Mouse + E + R
+
+Fire modes to come, currently designing schemas and considering button combos.
+
+Sniper scopes are planned to be added, and are currently unfinished :/
+
+Dual wielded weapons are supported and intuitive, using Right and Left mouse controls for fire
+
+SWEPs can break down doors at certian ranges. Shotguns will do this by default
+
+SWEPs can ignite close targets (where enabled)
+
+When enabled, weapons won't use Ironsights, and will instead use Aim Assist!
+• Uses the con var: swep_AutoAim (0 or 1)
+• Weapons held when this var is flipped need to be re-drawn to work
+• Aim assist is currently unbiased, but is planned to look at player teams for future filtering
+• When close enough to enemies, aim assist will aim for the head
+
+Weapon heat is in development for use later on; Should be available by beta
+
+Weapons cannot fire underwater unless specified (USP & MP5 Navy can)
+
+Automatic weapons experience some variance in shoot delay The current setting is fairly higher,
+
+When firing rapidly, bullets start to rise upward to accommodate recoil animations!
+
+New function: ShootBullet
+• Takes more arguments and will tie in with physics calculations to come
+
+New function: ShootPhysicalBullet
+• Takes same # of arguments as ShootBullet (Further arguments dont need to be passed)
+• Shoots a physical projectile using a stock model and trail effect
+• There is a known issue for transferring damage, to fix use console toggle " swep_stock_damage 1"
+• PhysicalBullets are attempting to be engineered to work with Bullet time binds, the physics is challenging
+
+Backwards compatibility with CSShootBullet function integrated
+
+
+
+
+CROSSHAIR SPECIFICS
+================================================== ==================================================
+
+Crosshairs disappear when swep is empty.
+Crosshairs become a dot for Ironsights.
+
+swep_reload_rate - console command for setting over all weaoon reload rates (part of formulas)
+swep_tracer # - console command for setting a tracer type over all weapons
+Tracers[1] = "AR2Tracer"
+Tracers[2] = "AirboatGunHeavyTracer"
+Tracers[3] = "AirboatGunTracer"
+Tracers[4] = "Tracer" -- STOCK TRACER, Looks good
+Tracers[5] = "StriderTracer"
+Tracers[6] = "HelicopterTracer"
+Tracers[7] = "GunshipTracer"
+Tracers[8] = "LaserTracer" -- Hard to see head on
+
+
+
+
+CONSOLE COMMANDS
+================================================== ==================================================
+
+swep_cone - when debugging is enabled, forces a cone for all weapons
+swep_physical_bullets - console command to toggle physical bullets [FIXED & WORKING!]
+swep_IronSights_FromFile *Keep off*
+cl_swep_FOV - console commands for client FOV
+swep_AutoReload - console command to toggle auto reload functionality
+swep_stock_damage - toggles the damage mode for physical bullets, keep it 1
+
+
+cl_crosshair_r - crosshair red
+cl_crosshair_g - crosshair green
+cl_crosshair_b - crosshair blue
+cl_crosshair_a - crosshair alpha
+
+cl_crosshair_scale - Crosshair scale (-1 to disable and use stock)
+cl_crosshair_l - crosshair length (30 is default)
+cl_crosshair_t - crosshair TOGGLE on or off
+cl_crosshair_type - crosshair type
+
+
+CROSSHAIR TYPES
+
+-1 =  Just the circle
+0 = Just the circle
+
+1
+			--   |
+			-- - o -
+			--   |
+2
+			--   ||
+			-- = o =
+			--   ||
+3
+			-- 
+			-- - o -
+			--   |
+
+4
+			--   |
+			-- > o <
+			--   ^
+5
+			--   .
+			-- ' o '
+			--   '
+6
+			-- 
+			--    .
+			-- '' o ''
+			--    '
+7
+			--   
+			-- '-o-'
+			--   '
+8
+			--   
+			-- '=o='
+			--   ' 
+9
+			--   
+			-- '-o-'
+			--   '
+10
+			--   
+			-- '-o-'
+			--   '
+11
+			--   o
+			--   '
+
+12 - 15 are planned but not yet designed, so they too are nothing
+
+• The color of the inside circle can't currently be changed! Planned to come!
+
+Generating sweps using this base
+================================================== ==================================================
+Creating new sweps using this base is easy!
+The creation for a swep file is done normally with only a few extra (and optional) tags and weapon_fiery_base
+
+If you don't want to use tags, consider using a different base:
+
+weapon_fiery_base_dual
+weapon_fiery_base_melee
+weapon_fiery_base_pistol
+weapon_fiery_base_rifle
+weapon_fiery_base_shotgun
+weapon_fiery_base_smg
+weapon_fiery_base_sniper
+weapon_fiery_base_templated -- Used by template (Not available in DL), Good for cookie cutter weapon creation
+
+• Fiery Tags •
+
+SWEP.Primary.Clips	                = 1 -- No more counting bullets.
+SWEP.Secondary.Clips		        = 1 -- Not integrated on this release
+SWEP.Akimbo				= false -- true to turn on akimbo functions
+SWEP.DoesIdle				= false -- Turn on idle animation functions
+
+SWEP.HoldType        		        = "" -- Used for Ironsight
+SWEP.HoldType2        		        = "" -- Used for Hipfire
+SWEP.ReloadHoldType        		= "" -- Used durring Reload
+
+SWEP.ReloadSound        		= Sound() 
+SWEP.DrawSound        		= Sound() 
+
+SWEP.UseHands				= true -- For C models
+SWEP.ShotgunFunctions		= false
+
+SWEP.DoDModelFunction		= false
+
+SWEP.DoDWeaponDraw			= false -- Draw a DoD icon instead of css
+SWEP.HL2WeaponDraw			= false -- Draw a HL2 Icon instead of css
+
+SWEP.DryFires				= false -- for CS:S and Emptyable weapons
+SWEP.CanBeEmpty				= true -- For weapons with an empty state, IE dod and Hl2 weapons mostly
+SWEP.SuppressedVolume		= 45
+SWEP.WorksUnderWater		= false  -- BOOL Just to make it fancy, its as easy as that
+
+
+
+• Explicit Animations •
+
+	// Normal animations found in MOST pistols and some rifles
+	SWEP.Primary.EmptyAnim		= ACT_VM_DRYFIRE
+	SWEP.Primary.ShootAnim		= ACT_VM_PRIMARYATTACK
+	// If the weapon should be held like a shotgun when not in iron sight
+	// If the held animation is crossbow, then it will be held like an AR2
+	SWEP.Secondary.EmptyAnim	= ACT_VM_FIDGET			 // No dryfire anims for secondary attacks(normally)
+	SWEP.Secondary.ShootAnim	= ACT_VM_SECONDARYATTACK // Melee, Special action, Secondary fire
+	// Abnormal reload, as in HL2 and DODS style pistol reloads
+	SWEP.ReloadAnim				= ACT_VM_RELOAD
+	SWEP.EmptyReloadAnim		= ACT_VM_RELOAD_EMPTY
+	// Once agian, Abnormal as defined above
+	SWEP.DrawAnim				= ACT_VM_DRAW
+	SWEP.EmptyDrawAnim			= ACT_VM_DRAW
+	// Most Pistol, rifle, and shotgun models have these animations... Because VALVe modelers are smart!lol
+	SWEP.EmpytyIdleAnim			= ACT_VM_IDLE -- Used with unloading the weapon!
+	SWEP.IdleAnim 				= ACT_VM_IDLE
+
+
+Files for custom sweps are incredibly compact too!
+This is the shared.lua for a fully animated DoD:S Colt
+
+
+if ( SERVER ) then
+	AddCSLuaFile( "shared.lua" )
+end
+
+if ( CLIENT ) then
+
+	SWEP.PrintName			= "M1911 .45"			
+	SWEP.Author			= "Nova Prospekt"
+	SWEP.Slot				= 1
+	SWEP.SlotPos			= 5
+	SWEP.IconLetter			= "a"
+	SWEP.WepSelectLetter	= "a"
+	
+	killicon.AddFont( "weapon_colt45", "CSKillIcons", SWEP.IconLetter, SWEP.IconColor )
+	
+end
+
+SWEP.Base					= "weapon_fiery_base_pistol"
+SWEP.Category				= "Fiery"
+
+SWEP.Spawnable			= true
+SWEP.AdminSpawnable		= true
+
+SWEP.HoldType				= "csspistol" -- Ironsights
+SWEP.HoldType2			= "onehand" -- Hipfire
+SWEP.ReloadHoldType		= "onehand" -- Reload (otherwise csspistol/2hand would be used by default)
+
+SWEP.ViewModel			= "models/weapons/v_colt.mdl"
+SWEP.WorldModel			= "models/weapons/w_pistol.mdl"
+SWEP.ViewModelFlip			= false
+SWEP.Weight				= 4
+
+SWEP.Primary.Sound			= Sound( "Weapon_colt.Shoot" )
+SWEP.Primary.Recoil			= 1.1
+SWEP.Primary.Damage		= 26
+SWEP.Primary.NumShots		= 1
+SWEP.Primary.Cone			= 0.047
+SWEP.Primary.ClipSize		        = 7
+SWEP.Primary.Clips		        = 4 -- Extra clips can be given explicitly
+SWEP.Primary.Delay			= 0.05
+SWEP.Primary.Automatic		= false
+SWEP.Primary.Ammo			= "357"
+
+SWEP.IronSightsPos 			= Vector (-3.8551, -5.0515, 3.6184)
+SWEP.IronSightsAng 			= Vector (0.4947, 0.078, 0)
+
+/*---------------------------------------------------------
+	Fiery Tags
+---------------------------------------------------------*/
+SWEP.DryFires				= true -- Unlocks Dry Fire Functionality
+SWEP.CanBeEmpty			= true - Unlocks _EMPTY anims
+
+SWEP.DoDModelFunction		= true -- Unlocks DoD Model Functionality
+SWEP.DoesIdle				= true
+
+
+
+Technical Notes and Disclosures
+================================================== ==================================================
+1. This addon will overwrite weapon_cs_base
+• This version is only slightly different and should not break any code based on cs_base
+
+2. This base has not been tested on servers. Some CL/SV solutions are in works!
+
+3. SWEP.Primary.DefaultClip and SWEP.Secondary.DefaultClip have become OBSOLETE! Default Clips are calculated in the base for simplicity. Usining DefaultClip WILL glitch custom made SWEPS!!
+
+4. Stock CS_base weapons are overwrote when using this download for easier game and map integration's with this weapon pack
+
+6. MISSING TEXTURES: Dual 357's
+• This fix will be for the models pack on workshop!
+
+================================================== ==================================================
+Thoughts? Questions? Comments? Bugs? Constructive criticisms or additions?
+> POST EM!! I wanna hear them! <
+( I also want your error messages! )

@@ -1,0 +1,232 @@
+======================================================================
+Fiery Weapons Base is a weapon base created from modified weapon_cs_base files and has been designed mostly for all around functionality of weapons, especially for gamemodes like RP
+
+> The base is ONLY IN ALPHA 1.4 !!! <
+
+If there are any errors, suggestions, comments, bug reports, please post them!
+We are still trying to improve and develope!
+
+https://facepunch.com/showthread.php?t=1495820
+
+=======================================================================
+
+CHECK OUT THE BETA:
+https://steamcommunity.com/sharedfiles/filedetails/?id=2078248831
+
+
+Crunches complex viewmodel and 3rd person animations into efficient, correct SWEP status animations , as-well as handling playback rates, sounds, Idling, and ironsights
+
+Dual wielded weapons are supported and intuitive, using Right and Left mouse controls for fire
+
+When enabled, weapons won't use Ironsights, and will instead use [b]Aim Assist[/b]!
+• Uses the con var: swep_AutoAim (0 or 1)
+• Weapons held when this var is flipped need to be re-drawn to work
+• Aim assist is currently unbiased, but is planned to look at player teams for future filtering
+• When close enough to enemies, aim assist will aim for the head
+
+Weapons cannot fire underwater unless specified (USP & MP5 Navy can)
+
+When firing rapidly, bullets start to rise upward to accommodate recoil animations! 
+
+SWEPs can break down doors at certian ranges. Shotguns will do this by default
+
+SWEPs can ignite close targets (where enabled)
+
+Ability to drop a weapons magazine with full animations great for RP (Shotguns have animations for this in works) (Akimbos currently are being looked at for alternative key combos for this)
+• (Drop weapon may be added as well)
+• To use this, Hold Right Mouse + E + R
+
+Magazine gibs will be dropped according to the SWEPS view model name or explicit mag type (self.Mag = mdl)
+Self.NoMag overrides this if true!
+
+======================================================================= 
+cl_crosshair_r - crosshair red
+cl_crosshair_g - crosshair green
+cl_crosshair_b - crosshair blue
+cl_crosshair_a - crosshair alpha
+
+cl_crosshair_scale - Crosshair scale (-1 to disable and use stock)
+cl_crosshair_l - crosshair length (30 is default)
+cl_crosshair_t - crosshair TOGGLE on or off
+cl_crosshair_type - crosshair type (SEE BELOW)
+
+-1 =  Just the circle
+0 = Just the circle
+
+1
+			--   |
+			-- - o -
+			--   |
+2
+			--   ||
+			-- = o =
+			--   ||
+3
+			-- 
+			-- - o -
+			--   |
+
+4
+			--   |
+			-- > o <
+			--   ^
+5
+			--   .
+			-- ' o '
+			--   '
+6
+			-- 
+			--    .
+			-- '' o ''
+			--    '
+7
+			--   
+			-- '-o-'
+			--   '
+8
+			--   
+			-- '=o='
+			--   ' 
+9
+			--   
+			-- '-o-'
+			--   '
+10
+			--   
+			-- '-o-'
+			--   '
+11
+			--   o
+			--   '
+
+
+======================================================================= 
+Fiery Weapons Base is a weapon base created from modified weapon_cs_base files and has been designed mostly for all around functionality of weapons, especially for gamemodes like RP 
+
+> The base is ONLY IN ALPHA 3.0 !!! < 
+
+If there are any errors, suggestions, comments, bug reports, please post them! 
+We are still trying to improve and develope! 
+
+https://facepunch.com/showthread.php?t=1509571&p=49887612#post49887612
+
+
+=======================================================================
+The BETA 2 for Fiery Weapons is here!
+
+Enjoy the classic Source weapons feel with all the advanced bells and whistles!
+
+Make your own high-complexity scripted weapons with ease
+
+Spice up your RP experience with the mag removal and chambering features
+
+Have fun with the built in aim assist!
+
+
+Crunches complex viewmodel and 3rd person animations into efficient, correct SWEP status animations , as-well as handling playback rates, sounds, Idling, and ironsights
+
+Dual wielded weapons are supported and intuitive, using Right and Left mouse controls for fire
+
+When enabled, weapons won't use Ironsights, and will instead use Aim Assist!
+• Uses the con var: swep_AutoAim (0 or 1)
+• Weapons held when this var is flipped need to be re-drawn to work
+• Aim assist is currently unbiased, but is planned to look at player teams for future filtering
+• When close enough to enemies, aim assist will aim for the head
+
+Weapons cannot fire underwater unless specified (USP & MP5 Navy can)
+
+When firing rapidly, bullets start to rise upward to accommodate recoil animations!
+
+SWEPs can break down doors at certain ranges. Shotguns will do this by default
+
+SWEPs can ignite close targets (where enabled)
+
+SWEPS can be topped off with a reload
+
+
+Ability to drop a weapons magazine with full animations great for RP (Shotguns have animations for this in works) (Akimbos currently are being looked at for alternative key combos for this)
+• (Drop weapon may be added as well)
+• To use this, Hold Right Mouse + E + R
+
+Magazine gibs will be dropped according to the SWEPS view model name or explicit mag type (self.Mag = mdl)
+Self.NoMag overrides this if true!
+
+=======================================================================
+cl_crosshair_r - crosshair red
+cl_crosshair_g - crosshair green
+cl_crosshair_b - crosshair blue
+cl_crosshair_a - crosshair alpha
+
+cl_crosshair_scale - Crosshair scale (-1 to disable and use stock)
+cl_crosshair_l - crosshair length (30 is default)
+cl_crosshair_t - crosshair TOGGLE on or off
+cl_crosshair_type - crosshair type (SEE BELOW)
+
+-1 = Just the circle
+0 = Just the circle
+
+1
+-- |
+-- - o -
+-- |
+2
+-- ||
+-- = o =
+-- ||
+3
+--
+-- - o -
+-- |
+
+4
+-- |
+-- > o <
+-- ^
+5
+-- .
+-- ' o '
+-- '
+6
+--
+-- .
+-- '' o ''
+-- '
+7
+--
+-- '-o-'
+-- '
+8
+--
+-- '=o='
+-- '
+9
+--
+-- '-o-'
+-- '
+10
+--
+-- '-o-'
+-- '
+11
+-- o
+-- '
+
+
+=======================================================================
+Fiery Weapons Base is a weapon base created from modified weapon_cs_base files and has been designed mostly for all around functionality of weapons, especially for gamemodes like RP
+
+> The base is ONLY IN BETA !!! <
+
+> You need CS:GO content for dropped magazines <
+> If you do not have CS:GO, enter  swep_DropMags 0  into developer console <
+
+If there are any errors, suggestions, comments, bug reports, please post them!
+We are still trying to improve and develop!
+
+Click here to goto the main fiery addon:
+https://steamcommunity.com/sharedfiles/filedetails/?id=2231540191
+
+To view the collection of Fiery Weapons click this link:
+https://steamcommunity.com/sharedfiles/filedetails/?id=2231714961
+
+=======================================================================

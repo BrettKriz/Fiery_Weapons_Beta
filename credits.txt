@@ -1,0 +1,76 @@
+//Credits for all of the custom models provided
+echo ]
+echo -- Tec-9 --
+echo Edited Name: v_smg_tec-9.mld
+echo Model: Dav0r
+echo Textures: Downloadable Skillz
+echo Animations: The_AntiPirate
+echo Compile/menu pic/skin edits: Eggwhites
+echo 
+echo -- Kitteh and Twinke Dualies --
+echo 
+echo Kahr Model: Kitteh
+echo Kahr Skin: Kitteh
+echo Kahr UV: Kitteh
+echo Original Compile and Skin edit: DarkElfa
+echo 
+echo Colt Model: Twinke.Masta
+echo Colt Skin: Kimono
+echo Original Compile: L0RDN00B
+echo 
+echo Animations: The Antipirate, aka Candied Clown
+echo Sounds: Vunsunta
+echo Current Compile: Bathroom Security
+echo 
+echo -- Glock and Mk23 --
+echo 
+echo Credits:
+echo Usp Model:the lama
+echo Usp Skin:SolidSnake Edits: the lama
+echo Glock Model: Bullet_Head 
+echo Glock Skin: Thanez 
+echo Animations: Jennifer!
+echo Sounds: Vunsunta / RE4 /
+echo Original Compile for the USP:Bullet_Head 
+echo original Compile for the Glock:Bullet_Head 
+echo Compile for Elites: Dr. Midnight
+echo 
+echo -- Dual Glocks --
+echo 
+echo Model: Valve
+echo Skin: Valve
+echo Animations: Valve
+echo Compile: DeadPixel
+echo Recolor: Timmy
+echo Sounds: xLongWayHome
+echo 
+echo -- Dual Desert Eagles --
+echo Wannabe's Desert Eagles
+echo 
+echo Model: Firegold
+echo Skin: Stoke and Enmity
+echo Sound: Hk & Vunsunta & Drake
+echo Anims: Jennifer!!
+echo Refs: !NC!Furious
+echo Compile: Drake
+echo 
+echo -- Dual Colt Pythons --
+echo Bathroom Security
+echo 
+echo Model : Valve
+echo Skin : VertThrasher
+echo Animations : Mulletô
+echo Sounds: Valve
+echo Compile: L0RDN00B
+echo 
+echo -- Dual IMI Micro UZI --
+echo 
+echo model: flakk
+echo uvmap: iono
+echo skin: snake
+echo animations: Valve
+echo fire sound: mixx» @ WS-Design
+echo Other sounds: Valve
+echo compile: Mulletô
+echo 
+echo ]
